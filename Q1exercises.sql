@@ -2,7 +2,7 @@
 select Pbreed,Ptype,PDOB from pet where Ptype = "Dog" and Pbreed = "Rich";
 
 #Q1 exercise b
-select Pet_ID,Pbreed,Ptype from pet where Petname like "T%";
+select Pet_ID,Pbreed,Ptype from pet where Petname like "T____";
 
 #Q1 exercise c
 #to test exercise I insert new row to the table
