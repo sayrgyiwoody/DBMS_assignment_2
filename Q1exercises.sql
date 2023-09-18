@@ -14,4 +14,4 @@ select Pbreed , avg(Pweight) from pet group by (Pbreed) having  count(Pbreed) >=
 select Address from Pet_Owner inner join pet on pet.Owner_ID = Pet_Owner.Owner_ID where Pet_ID = "P-3";
 
 #Q1 exercise e
-SELECT MAX(STR_TO_DATE(PDOB, '%d-%m-%Y')) AS youngest_dog FROM pet WHERE Ptype = 'Dog';
+select * from pet where str_to_date(PDOB,"%d-%m-%Y") = (select max(str_to_date(PDOB,"%d-%m-%Y")) from pet where Ptype = "Dog");
